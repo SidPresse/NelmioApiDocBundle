@@ -16,10 +16,10 @@
         <div id="header">
             <a href="{{ path('nelmio_api_doc_index') }}"><h1>{{ apiName }}</h1></a>
             <br style="clear: both;" />
-            <p>{{ apiDesc|raw }}</p>
+            <p>{{ apiDesc }}</p>
 
             {% if enableSandbox %}
-                <div id="sandbox_configuration">
+                <div id="sandbox_configuration"> 
                     body format:
                     <select id="body_format">
                         <option value="x-www-form-urlencoded"{{ bodyFormat == 'form' ? ' selected' : '' }}>Form Data</option>
