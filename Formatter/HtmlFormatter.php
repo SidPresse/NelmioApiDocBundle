@@ -23,6 +23,11 @@ class HtmlFormatter extends AbstractFormatter
     /**
      * @var string
      */
+    protected $apiDesc;
+
+    /**
+     * @var string
+     */
     protected $endpoint;
 
     /**
@@ -79,6 +84,14 @@ class HtmlFormatter extends AbstractFormatter
     public function setApiName($apiName)
     {
         $this->apiName = $apiName;
+    }
+
+    /**
+     * @param string $apiDesc
+     */
+    public function setApiDesc($apiDesc)
+    {
+        $this->apiDesc = $apiDesc;
     }
 
     /**
@@ -187,6 +200,7 @@ class HtmlFormatter extends AbstractFormatter
     {
         return array(
             'apiName'              => $this->apiName,
+            'apiDesc'              => $this->apiDesc,
             'authentication'       => $this->authentication,
             'endpoint'             => $this->endpoint,
             'enableSandbox'        => $this->enableSandbox,
