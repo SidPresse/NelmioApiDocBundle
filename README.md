@@ -240,11 +240,12 @@ If you want to generate a static version of your documentation without sandbox, 
 
 ## Configuration ##
 
-You can specify your own API name:
+You can specify your own API name and description:
 
     # app/config/config.yml
     nelmio_api_doc:
         name: My API
+        desc: API description
 
 This bundle provides a sandbox mode in order to test API methods. You can
 configure this sandbox using the following parameters:
