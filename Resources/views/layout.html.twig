@@ -14,9 +14,7 @@
     </head>
     <body>
         <div id="header">
-            <a href="{{ path('nelmio_api_doc_index') }}"><h1>{{ apiName }}</h1></a>
-            <br style="clear: both;" />
-            <p>{{ apiDesc }}</p>
+            <a href="{{ path('nelmio_api_doc_index') }}"><span class="name">{{ apiName }} | </span><span class="desc"> {{ apiDesc }}</span></a>
 
             {% if enableSandbox %}
                 <div id="sandbox_configuration"> 
@@ -44,7 +42,7 @@
 
         </div>
         {% include motdTemplate %}
-        <div class="container" id="resources_container">
+        <div class="container_api" id="resources_container">
             <ul id="resources">
                 {% block content %}{% endblock %}
             </ul>

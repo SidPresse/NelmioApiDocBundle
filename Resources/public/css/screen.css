@@ -134,14 +134,25 @@ table tbody tr:last-child td {
 }
 
 #header {
-  background-color: #89BF04;
-  padding: 1%;
-  margin-bottom: 1%;
+  /*background-color: #89BF04;*/
+  padding: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid gray;
 }
 
 #header h1 {
   font-size: 1.2em;
-  float: left;
+  /*float: left;*/
+}
+
+#header span.name {
+  font-size: 1.2em;
+  color: black;
+}
+
+#header span.desc {
+  font-size: 0.8em;
+  color: gray;
 }
 
 #header a {
@@ -164,7 +175,7 @@ table tbody tr:last-child td {
 }
 
 #resources {
-  padding: 0 1%;
+  padding: 0 10px;
   font-family: "Droid Sans", sans-serif;
   font-size: 0.9em;
 }
@@ -565,5 +576,5 @@ form .request-content {
 }
 
 .motd {
-  padding:20px;
+  padding:10px;
 }
