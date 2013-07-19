@@ -54,7 +54,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Requirement</th>
+                            {# <th>Requirement</th> #}
                             <th>Type</th>
                             <th>Description</th>
                         </tr>
@@ -63,7 +63,7 @@
                         {% for name, infos in data.requirements %}
                             <tr>
                                 <td>{{ name }}</td>
-                                <td>{{ infos.requirement }}</td>
+                                {# <td>{{ infos.requirement }}</td> #}
                                 <td>{{ infos.dataType }}</td>
                                 <td>{{ infos.description }}</td>
                             </tr>
@@ -84,8 +84,8 @@
                     <tbody>
                     {% for name, infos in data.filters %}
                         <tr>
-                            <td>{{ name }}</td>
-                            <td>
+                            <td class="head">{{ name }}</td>
+                            <td class="head">
                                 <table>
                                 {% for key, value in infos %}
                                     <tr>

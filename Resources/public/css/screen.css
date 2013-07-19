@@ -107,10 +107,10 @@ p code {
 }
 
 pre {
-  padding: 10px;
+/*  padding: 10px;
   border: 1px solid #e5e0c6;
   margin-bottom: 15px;
-  line-height:1.2em;
+  line-height:1.2em;*/
 }
 
 table.fullwidth {
@@ -123,11 +123,13 @@ table thead tr th {
   border-bottom: 1px solid #999999;
 }
 table tbody tr td {
-  padding: 6px;
+  padding: 5px;
   font-size: 0.9em;
-  border-bottom: 1px solid #cccccc;
   vertical-align: top;
-  line-height: 1.3em;
+  line-height: 1em;
+}
+table tbody tr td.head {
+  border-bottom: 1px solid #cccccc;
 }
 table tbody tr:last-child td {
   border-bottom: none;
