@@ -274,6 +274,8 @@
                         beforeSend: function (xhr) {
                             if (authentication_delivery == 'http_basic') {
                                 xhr.setRequestHeader('Authorization', 'Basic ' + btoa($('#api_key').val() + ':' + $('#api_pass').val()));
+                            }else if(authentication_delivery == 'header') {
+                                xhr.setRequestHeader(api_key_parameter, $('#api_key').val());
                             }
                         },
                         complete: function(xhr) {
@@ -375,6 +377,9 @@
 
                     $('#api_key').val(api_key);
                 }
+                {% elseif authentication and authentication.delivery == 'header' %}
+                var authentication_delivery = '{{ authentication.delivery }}';
+                var api_key_parameter = '{{ authentication.name }}';
                 {% else %}
                 var authentication_delivery = false;
                 {% endif %}

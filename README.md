@@ -104,8 +104,9 @@ The following properties are available:
 
 * `filters`: an array of filters;
 
-* `input`: the input type associated to the method, currently this supports Form Types, and classes with JMS Serializer
- metadata, useful for POST|PUT methods, either as FQCN or as form type (if it is registered in the form factory in the container).
+* `input`: the input type associated to the method (currently this supports Form Types, classes with JMS Serializer
+ metadata, and classes with Validation component metadata) useful for POST|PUT methods, either as FQCN or as form type
+ (if it is registered in the form factory in the container).
 
 * `output`: the output type associated with the response.  Specified and parsed the same way as `input`.
 
@@ -278,8 +279,10 @@ input is used, so you can configure their priorities via container tags. Here's 
 You can also define your own motd content (above methods list). All you have to do is add to configuration:
 
     #app/config/config.yml
-    motd:
-        template: AcmeApiBundle::Components/motd.html.twig
+    nelmio_api_doc:
+        # ...
+        motd:
+            template: AcmeApiBundle::Components/motd.html.twig
 
 ## Using Your Own Annotations ##
 

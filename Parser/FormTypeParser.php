@@ -25,6 +25,11 @@ class FormTypeParser implements ParserInterface
     protected $formFactory;
 
     /**
+     * @var \Symfony\Component\Form\FormRegistry
+     */
+    protected $formRegistry;
+
+    /**
      * @var array
      */
     protected $mapTypes = array(
